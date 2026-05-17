@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="95" fill="#0b7285" opacity="0.1" stroke="#0b7285" stroke-width="2"/>
+  
+  <!-- Octopus body -->
+  <circle cx="100" cy="70" r="25" fill="#0b7285"/>
+  
+  <!-- Octopus eyes -->
+  <circle cx="92" cy="65" r="5" fill="#ffffff"/>
+  <circle cx="108" cy="65" r="5" fill="#ffffff"/>
+  <circle cx="92" cy="65" r="2.5" fill="#0b7285"/>
+  <circle cx="108" cy="65" r="2.5" fill="#0b7285"/>
+  
+  <!-- Octopus tentacles -->
+  <path d="M 85 90 Q 75 120 70 150" stroke="#0b7285" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M 92 93 Q 85 130 82 160" stroke="#ffb703" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M 100 95 Q 100 135 100 165" stroke="#0b7285" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M 108 93 Q 115 130 118 160" stroke="#ffb703" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M 115 90 Q 125 120 130 150" stroke="#0b7285" stroke-width="6" fill="none" stroke-linecap="round"/>
+  
+  <!-- Highlight on octopus body -->
+  <ellipse cx="108" cy="55" rx="8" ry="10" fill="#ffffff" opacity="0.3"/>
+</svg>
