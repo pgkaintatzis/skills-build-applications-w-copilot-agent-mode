@@ -22,7 +22,7 @@ from rest_framework.decorators import api_view
 from rest_framework.routers import DefaultRouter
 from rest_framework.response import Response
 from rest_framework.reverse import reverse
-from .views import TeamViewSet, ActivityViewSet, LeaderboardViewSet, WorkoutViewSet
+from .views import TeamViewSet, UserProfileViewSet, ActivityViewSet, LeaderboardViewSet, WorkoutViewSet
 
 codespace_name = os.environ.get('CODESPACE_NAME')
 if codespace_name:
@@ -34,6 +34,7 @@ else:
 @api_view(['GET'])
 def codespace_api_root(request, format=None):
     response_data = {
+        'users': reverse('userprofile-list', request=request, format=format),
         'teams': reverse('team-list', request=request, format=format),
         'activities': reverse('activity-list', request=request, format=format),
         'leaderboard': reverse('leaderboard-list', request=request, format=format),
@@ -48,6 +49,7 @@ def codespace_api_root(request, format=None):
     return Response(response_data)
 
 router = DefaultRouter()
+router.register(r'users', UserProfileViewSet)
 router.register(r'teams', TeamViewSet)
 router.register(r'activities', ActivityViewSet)
 router.register(r'leaderboard', LeaderboardViewSet)
